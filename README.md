@@ -46,7 +46,7 @@ Install from the [VS Code Marketplace](#) *(link coming soon)*
 
 Or clone and run locally:
 ```bash
-git clone https://github.com/YOUR_USERNAME/meme-error-audio
+git clone https://github.com/piyushkumar-git/meme-error-audio.git
 cd meme-error-audio
 npm install
 ```
