@@ -1,0 +1,50 @@
+{
+  "name": "meme-error-audio",
+  "displayName": "meme-error-audio",
+  "description": "Plays meme sounds on code errors (Default - 'Faah', 'Kya cheda bho***')",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+        "title": "Meme Error Audio",
+        "properties": {
+            "memeErrorAudio.customSoundPath": {
+                "type": "string",
+                "default": "",
+                "description": "Full path to your custom .mp3 file. Leave empty to use default meme sounds."
+            },
+            "memeErrorAudio.defaultSound": {
+                "type": "string",
+                "default": "random",
+                "enum": ["random", "faah", "kya-cheda"],
+                "description": "Which default sound to play on errors. Choose 'random' to alternate randomly."
+            }
+        }
+    }
+},
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.109.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.3"
+  },
+  "dependencies": {
+    "sound-play": "^1.1.0"
+  }
+}
